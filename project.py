@@ -14,6 +14,6 @@ bootstrap = Bootstrap5(app)
 def index():
     return render_template('index.html')
 
-@app.route('/')
+@app.route('/minimalism')
 def minimalism():
     return render_template('minimalism.html')
