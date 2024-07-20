@@ -13,3 +13,7 @@ bootstrap = Bootstrap5(app)
 @app.route('/', methods=('GET', 'POST'))
 def index():
     return render_template('index.html')
+
+@app.route('/minimalism')
+def minimalism():
+    return render_template('minimalism.html')
