@@ -17,3 +17,7 @@ def index():
 @app.route('/minimalism')
 def minimalism():
     return render_template('minimalism.html')
+
+@app.route('/cyber_punk')
+def cyber_punk():
+    return render_template('cyber_punk.html')
