@@ -21,3 +21,11 @@ def minimalism():
 @app.route('/cyber_punk')
 def cyber_punk():
     return render_template('cyber_punk.html')
+
+@app.route('/earthy')
+def earthy():
+    return render_template('earthy.html')
+
+@app.route('/grunge')
+def grunge():
+    return render_template('grunge.html')
