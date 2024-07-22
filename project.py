@@ -12,7 +12,7 @@ bootstrap = Bootstrap5(app)
 @app.route('/', methods=('GET', 'POST'))
 def index():
     return render_template('index.html')
-<<<<<<< HEAD
+
 @app.route('/<title><page>')
 def index1(title, page):
     print (title, page)
@@ -50,7 +50,6 @@ def index1(title, page):
 
 print(index_count)
     
-=======
 
 @app.route('/minimalism')
 def minimalism():
@@ -59,4 +58,3 @@ def minimalism():
 @app.route('/cyber_punk')
 def cyber_punk():
     return render_template('cyber_punk.html')
->>>>>>> main
