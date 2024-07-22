@@ -1,9 +1,6 @@
 from flask import Flask, render_template, flash, redirect
 from flask_bootstrap import Bootstrap5
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
-from wtforms.validators import DataRequired
-from datetime import datetime
 from function import maxIndex
 index_count = [0,0,0,0]
 app = Flask(__name__)
@@ -30,8 +27,8 @@ def index1(title, page):
         return render_template('index3.html')
     if(page == '3'):
         index = maxIndex(index_count)
-        print(index_count)
-        print(index)
+        for i in range(4):
+            index_count[i]=0
         if(index == 0):
             return render_template('cyber_punk.html')
         elif(index == 1):
@@ -45,7 +42,4 @@ def index1(title, page):
     else:
         render_template('index.html')
 
-
-
-print(index_count)
     
