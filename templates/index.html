@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    {{ bootstrap.load_css()}}
 </head>
 <body>
-    <br>
-    <ul>
-        <h1>College Aesthetic Quiz</h1>
-        <p>
-            Are you going to college soon and having a hard time deciding what you want your dorm room to look like? <br>Or maybe you have an idea of what you want, but you don’t know how to describe the look you’re going for. <br>With this quiz, we will tell you what aesthetic best fits you based on the answers.
-        </p>
-    </ul>
+    <p>Are you going to college soon and having a hard time deciding what you want your dorm room to look like? 
+        Or maybe you have an idea of what you want, but you don’t know how to describe the look you’re going for.
+        With this quiz, we will tell you what you what aesthetic best fits you based off of the answers</p>
+        <div style ="text-align: center;">
+        <a href={{url_for('index1',title = "cyber",page=1)}}><img src="static/images/cyber_1.jpg" height="500" width="500" alt="cyber"></a><br>
+        <a href={{url_for('index1',title = "earthy",page=1)}}><img src="static/images/earthy_1.jpg" height="500" width="500" alt="earthy"></a><br>
+        <a href={{url_for('index1',title = "grunge",page=1)}}><img src="static/images/grunge_1.jpg" height="500" width="500" alt="grunge"></a><br>
+        <a href={{url_for('index1',title = "minimalist",page=1)}}><img src="static/images/minimalist_1.jpg" height="500" width="500" alt="minimalist"></a><br>
+        </div>
 </body>
 </html>
