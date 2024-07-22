@@ -30,8 +30,8 @@ def index1(title, page):
         return render_template('index3.html')
     if(page == '3'):
         index = maxIndex(index_count)
-        print(index_count)
-        print(index)
+        for i in range(4):
+            index_count[i]=0
         if(index == 0):
             return render_template('cyber_punk.html')
         elif(index == 1):
@@ -44,16 +44,3 @@ def index1(title, page):
             return render_template('index.html')
     else:
         render_template('index.html')
-
-
-
-print(index_count)
-    
-
-@app.route('/minimalism')
-def minimalism():
-    return render_template('minimalism.html')
-
-@app.route('/cyber_punk')
-def cyber_punk():
-    return render_template('cyber_punk.html')
