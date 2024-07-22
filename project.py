@@ -3,12 +3,15 @@ from flask_bootstrap import Bootstrap5
 from flask_wtf import FlaskForm
 from function import maxIndex
 index_count = [0,0,0,0]
+
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'csumb-otter'
 bootstrap = Bootstrap5(app)
 @app.route('/', methods=('GET', 'POST'))
 def index():
     return render_template('index.html')
+
 @app.route('/<title><page>')
 def index1(title, page):
     print (title, page)
@@ -41,5 +44,3 @@ def index1(title, page):
             return render_template('index.html')
     else:
         render_template('index.html')
-
-    
