@@ -15,7 +15,6 @@ def index():
 @app.route('/<title><page>')
 def index1(title, page):
     print (title, page)
-    print (index_count)
     if title == "cyber":
         index_count[0]+=1
     if(title == "earthy"):
@@ -30,14 +29,19 @@ def index1(title, page):
     if(page == '2'):
         return render_template('index3.html')
     if(page == '3'):
-        return render_template('index4.html')
-    if(page == '4'):
         index = maxIndex(index_count)
+        print(index_count)
         print(index)
-    if(index == 1):
-        return render_template('cyber.html')
-    elif(index == 4):
-        return render_template('minimalism.html')
+        if(index == 0):
+            return render_template('cyber_punk.html')
+        elif(index == 1):
+            return render_template('earthy.html')
+        elif(index == 2):
+            return render_template('grunge.html')
+        elif(index == 3):
+            return render_template('minimalism.html')
+        else:
+            return render_template('index.html')
     else:
         render_template('index.html')
 
