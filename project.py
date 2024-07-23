@@ -1,7 +1,11 @@
+'''CST205 -- Room Decor Quiz Group Project'''
+
 from flask import Flask, render_template, flash, redirect
 from flask_bootstrap import Bootstrap5
 from flask_wtf import FlaskForm
 from function import maxIndex
+from image_info import image_list
+
 index_count = [0,0,0,0]
 
 
@@ -9,7 +13,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'csumb-otter'
 bootstrap = Bootstrap5(app)
 @app.route('/', methods=('GET', 'POST'))
-def index():
+def index():    
     return render_template('index.html')
 
 @app.route('/<title><page>')
@@ -57,3 +61,4 @@ def minimalism():
 @app.route('/cyber_punk')
 def cyber_punk():
     return render_template('cyber_punk.html')
+
