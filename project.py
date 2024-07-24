@@ -4,8 +4,6 @@ from flask import Flask, render_template, flash, redirect
 from flask_bootstrap import Bootstrap5
 from flask_wtf import FlaskForm
 from function import maxIndex
-from image_info import image_list
-
 index_count = [0,0,0,0]
 
 
@@ -13,7 +11,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'csumb-otter'
 bootstrap = Bootstrap5(app)
 @app.route('/', methods=('GET', 'POST'))
-def index():    
+def index():
     return render_template('index.html')
 
 @app.route('/<title><page>')
@@ -34,8 +32,8 @@ def index1(title, page):
         return render_template('index3.html')
     if(page == '3'):
         index = maxIndex(index_count)
-        print(index_count)
-        print(index)
+        for i in range(4):
+            index_count[i]=0
         if(index == 0):
             return render_template('cyber_punk.html')
         elif(index == 1):
@@ -48,17 +46,3 @@ def index1(title, page):
             return render_template('index.html')
     else:
         render_template('index.html')
-
-
-
-print(index_count)
-    
-
-@app.route('/minimalism')
-def minimalism():
-    return render_template('minimalism.html')
-
-@app.route('/cyber_punk')
-def cyber_punk():
-    return render_template('cyber_punk.html')
-
