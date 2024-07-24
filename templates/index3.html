@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    .img-container {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+    }
+    
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-<div style ="text-align: center;">
-    <a href={{url_for('index1',title = "cyber",page=3)}}><img src="static/images/cyber_3.jpg"  height="500" width="500" alt="cyber"></a><br>
-    <a href={{url_for('index1',title = "earthy",page=3)}}><img src="static/images/earthy_3.jpg"  height="500" width="500" alt="earthy"></a><br>
-    <a href={{url_for('index1',title = "grunge",page=3)}}><img src="static/images/grunge_3.jpg"  height="500" width="500" alt="grunge"></a><br>
-    <a href={{url_for('index1',title = "minimalist",page=3)}}><img src="static/images/minimalist_3.jpg" height="500" width="500" alt="minimalist"></a><br>
-</div>
+    <div class="clearfix">
+        <div class="img-container">
+        <a href={{url_for('index1',title = "cyber",page=3)}}><img src="static/images/cyber_3.jpg"  width="500" alt="cyber"style="width:100%"></a><br>
+        </div>
+        <div class="img-container">
+        <a href={{url_for('index1',title = "earthy",page=3)}}><img src="static/images/earthy_3.jpg"  width="700" alt="earthy"style="width:80%"></a><br>
+        </div>
+    </div>
+    <div class="clearfix">
+        <div class="img-container">
+        <a href={{url_for('index1',title = "grunge",page=3)}}><img src="static/images/grunge_3.jpg"  width="500" alt="grunge" style="width:100%"></a><br>
+        </div>
+        <div class="img-container">
+        <a href={{url_for('index1',title = "minimalist",page=3)}}><img src="static/images/minimalist_3.jpg"  width="500" alt="minimalist" style="width:100%"></a><br>
+        </div>
+    </div>
+
 </body>
 </html>

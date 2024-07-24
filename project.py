@@ -1,3 +1,5 @@
+'''CST205 -- Room Decor Quiz Group Project'''
+
 from flask import Flask, render_template, flash, redirect
 from flask_bootstrap import Bootstrap5
 from flask_wtf import FlaskForm
