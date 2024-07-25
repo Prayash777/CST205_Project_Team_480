@@ -11,9 +11,9 @@ July 24, 2024
 <br>
 <br>
 This program is straight forward in the sense that as soon as you reach the home page, the program is already running.
-After reading the quick intro, the user will be prompted to pick the coolest room, they will then be redirected to the 
-next page where they will continue until they receive their "aesthetic". They will then be met with their aesthetic and 
-some background information along with the benefits. 
+After reading the quick intro, the user will be prompted to pick the coolest room, then will be directed to the 
+next page where they will continue until they receive their best suiting aesthetic. They will then be met with their decor results and 
+with some background information on the style, which might even reveal something about their personality. 
 <br>
 <br>
 <a href = "https://trello.com/b/LnAVNFe5/cst205-team-480"> Trello Board </a>
