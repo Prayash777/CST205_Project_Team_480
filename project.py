@@ -1,5 +1,11 @@
 '''CST205 -- Room Decor Quiz Group Project'''
-
+# CST05
+# Room Decor Quiz
+# Four our project, we decided to aim it towards a group that we all know very well, college students.
+# More specifically incoming college students who may be moving into a dorm or their very own room for the first time.
+# It is important that they have a guide when trying to decorate their room so they have a plan when going shopping.
+# Desiree Torres, Prayash Raj Singh, Rene Reyes
+# July 26, 2024
 from flask import Flask, render_template, flash, redirect
 from flask_bootstrap import Bootstrap5
 from flask_wtf import FlaskForm
